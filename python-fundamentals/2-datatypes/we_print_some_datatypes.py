@@ -1,0 +1,7 @@
+print(5)
+print('da')
+print(3.5)
+print(-4.99999999999999999)
+print(False)
+print(True)
+print(UnicodeError)
