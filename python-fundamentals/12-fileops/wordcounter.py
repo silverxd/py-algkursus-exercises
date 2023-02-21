@@ -10,9 +10,7 @@ wordcount = 0
 basefile = os.path.join(dirname, 'data.txt')
 outputfile = os.path.join(dirname, 'finaldat.txt')
 
-
 text = open (basefile, 'r')
-    
 for line in text:
     line = line.strip()
     line = line.lower()
