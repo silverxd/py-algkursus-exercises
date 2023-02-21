@@ -1,8 +1,16 @@
 import string
+import os
 
+dirname = os.path.dirname(__file__)
 datadict = dict()
+sorteddict = dict()
 wordcount = 0
-text = open ("./12-fileops/data.txt", 'r')
+
+basefile = os.path.join(dirname, 'data.txt')
+outputfile = os.path.join(dirname, 'finaldat.txt')
+
+
+text = open (basefile, 'r')
     
 for line in text:
     line = line.strip()
@@ -17,14 +25,16 @@ for line in text:
             datadict[word] = 1
         wordcount += 1
 
-with open('./12-fileops/finaldat.txt', '+w') as f:
+sorteddict = dict(sorted(datadict.items(), key=lambda item: item[1], reverse=True))
+
+with open(outputfile, '+w') as f:
     
     f.write(f'Total word count: {wordcount}\n')
-    for key in list(datadict.keys()):
-        f.write(str(key) + ':' + str(datadict[key]) + "\n")
+    for key in list(sorteddict.keys()):
+        f.write(str(key) + ':' + str(sorteddict[key]) + "\n")
 
     print(f'Total word count: {wordcount}\n')
-    for key in list(datadict.keys()):
-        print(str(key) + ':' + str(datadict[key]) + "\n")
+    for key in list(sorteddict.keys()):
+        print(str(key) + ':' + str(sorteddict[key]))
     
     
