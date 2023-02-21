@@ -3,8 +3,8 @@ dict = {}
 
 for i in [1,2,3]:
     print(f'#{i}')
-    counteutry = input('Sisesta riigi nimi: ')
-    captiltalist = input('Sisesta pealinn:') 
-    dict [counteutry] = captiltalist
+    country = input('Sisesta riigi nimi: ')
+    capital = input('Sisesta pealinn:') 
+    dict [country] = capital
 
 print(dict)
