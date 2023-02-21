@@ -2,7 +2,7 @@ import string
 
 datadict = dict()
 wordcount = 0
-text = open ("//server/opilased$/Silver.Slinko/Documents/PYTON/12-fileops/data.txt", 'r')
+text = open ("./12-fileops/data.txt", 'r')
     
 for line in text:
     line = line.strip()
@@ -17,7 +17,7 @@ for line in text:
             datadict[word] = 1
         wordcount += 1
 
-with open('12-fileops/finaldat.txt', '+w') as f:
+with open('./12-fileops/finaldat.txt', '+w') as f:
     
     f.write(f'Total word count: {wordcount}\n')
     for key in list(datadict.keys()):
