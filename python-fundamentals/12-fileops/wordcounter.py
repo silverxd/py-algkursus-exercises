@@ -3,7 +3,8 @@ import os
 
 dirname = os.path.dirname(__file__)
 datadict = dict()
-sorteddict = dict()
+alphabetsorteddict = dict()
+finalsorteddict = dict()
 wordcount = 0
 
 basefile = os.path.join(dirname, 'data.txt')
@@ -25,16 +26,17 @@ for line in text:
             datadict[word] = 1
         wordcount += 1
 
-sorteddict = dict(sorted(datadict.items(), key=lambda item: item[1], reverse=True))
+alphabetsorteddict = dict(sorted(datadict.items()))     # we gotta do this, otherwise the output will not be alphabetically sorted and will look bad
+finalsorteddict = dict(sorted(alphabetsorteddict.items(), key=lambda item: item[1], reverse=True))
 
 with open(outputfile, '+w') as f:
     
     f.write(f'Total word count: {wordcount}\n')
-    for key in list(sorteddict.keys()):
-        f.write(str(key) + ':' + str(sorteddict[key]) + "\n")
+    for key in list(finalsorteddict.keys()):
+        f.write(str(key) + ':' + str(finalsorteddict[key]) + "\n")
 
     print(f'Total word count: {wordcount}\n')
-    for key in list(sorteddict.keys()):
-        print(str(key) + ':' + str(sorteddict[key]))
+    for key in list(finalsorteddict.keys()):
+        print(str(key) + ':' + str(finalsorteddict[key]))
     
     
