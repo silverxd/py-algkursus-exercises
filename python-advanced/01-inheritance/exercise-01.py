@@ -9,14 +9,16 @@ class B(A):
 
 class C(B):
     def __init__(self):
-        print(f"C init called")
         super().__init__()
+        print(f"C init called")
+
         
 
 class D(A):
     def __init__(self):
-        super().__init__()
         print(f"D init called")
+        super().__init__()
+
         
 if __name__ == "__main__":
     print("Creating an instance of class C")
