@@ -1,4 +1,4 @@
 # py-algkursus-exercises
-Koidula Gümnaasiumi Pythoni algkursuse ülesannete lahendused
+Koidula Gümnaasiumi Pythoni kursuse ülesannete lahendused
 
-warning: this entire repo is powered by spaghetti code written by someone with next to no prior programming experience
+warning: I started learning Python using this course, so this entire repo is full of rather awful spaghetti code
